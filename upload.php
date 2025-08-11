@@ -42,8 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $col_arr = ['page_no', 'content_type', 'title', 'file_src', 'duration', 'active', 'created_on'];
             $val_arr = [$pageNo, $type, $title, $fileName, $duration, 1, date('Y-m-d H:i:s')];
             sql_insert("book_pages", $col_arr, $val_arr);
-
-            // $message = "✅ Upload successful!";
+            
             $message = ["message" => "Upload successful!", "message_type" => "success"];
 
             // Clear previous values
